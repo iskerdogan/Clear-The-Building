@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour
     private float jumpPower;
     [SerializeField]
     private float turnSpeed;
+    [SerializeField]
+    private Transform rayStartPoint;
     private Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,7 @@ public class Movement : MonoBehaviour
 
     private void TakeInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && OnGroundCheck())
         {
             rb.velocity = new Vector3(rb.velocity.x, Mathf.Clamp((jumpPower * 100) * Time.deltaTime, 0f, 7f), 0f);
         }
@@ -44,5 +46,16 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
         }
+    }
+
+    private bool OnGroundCheck()
+    {
+        bool hit = Physics.Raycast(rayStartPoint.position,Vector3.down,.50f);
+        Debug.DrawRay(rayStartPoint.position,Vector3.down * 0.50f,Color.red);
+        if (hit)
+        {
+            return true;
+        }
+        return false;
     }
 }

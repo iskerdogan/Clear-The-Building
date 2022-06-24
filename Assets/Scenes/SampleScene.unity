@@ -823,6 +823,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1722151094 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2655066665616166697, guid: 7061b089ba7fe8b409f19ea54af35c2f, type: 3}
+  m_PrefabInstance: {fileID: 2352771827008583152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2113058561
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,13 +980,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2352771825692993150, guid: 7061b089ba7fe8b409f19ea54af35c2f, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2352771825692993151, guid: 7061b089ba7fe8b409f19ea54af35c2f, type: 3}
-      propertyPath: turnSpeed
-      value: 10
+      propertyPath: rayStartPoint
+      value: 
+      objectReference: {fileID: 1722151094}
+    - target: {fileID: 2655066665616166697, guid: 7061b089ba7fe8b409f19ea54af35c2f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7991242094618772167, guid: 7061b089ba7fe8b409f19ea54af35c2f, type: 3}
+      propertyPath: m_Icon
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7061b089ba7fe8b409f19ea54af35c2f, type: 3}
